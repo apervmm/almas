@@ -20,5 +20,5 @@ http://127.0.0.1:8000/
 
 
 
-# RUN THE DEMO:
+# RUNNING DEMO:
 https://almas-resume.vercel.app/
