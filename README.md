@@ -21,4 +21,4 @@ http://127.0.0.1:8000/
 
 
 # RUNNING DEMO:
-[https://almas-resume.vercel.app/](https://apervm.vercel.app/)
+https://apervm.vercel.app/
