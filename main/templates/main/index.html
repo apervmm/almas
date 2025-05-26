@@ -66,6 +66,7 @@ Start Content
 
 
 {% comment %} Skills {% endcomment %}
+{% comment %} 
 <section>
   <div class="sectionSpace pt-0">
     <div class="container">
@@ -116,6 +117,7 @@ Start Content
     </div>
   </div>
 </section>
+{% endcomment %}
 
 {% comment %} Certificates {% endcomment %}
 <section>
@@ -123,7 +125,7 @@ Start Content
     <div class="container">
       <div class="row pb-3">
         <div class="col">
-          <h4 class="smText regular">Certificates</h4>
+          <h4 class="smText regular">Education & Certificates</h4>
         </div>
 
       </div>
@@ -159,9 +161,42 @@ Start Content
   </div>
 </section>
 
-{% comment %}  Projects and Testimonials {% endcomment %}
+{% comment %} WORK EXP {% endcomment %}
 <section>
   <div class="sectionSpace">
+    <div class="container">
+      <div class="row pb-3">
+        <div class="col">
+          <h4 class="smText regular">Work Exprerience</h4>
+        </div>
+        <div class="col-auto">
+          <a href="{% url 'main:blogs' %}" class="simpleLink">View all</a>
+        </div>
+      </div>
+      <div class="row g-3">
+      {% for b in blogs %}
+      {% if b.is_active %}
+        <div class="col-lg-6">
+          <div class="cardStyle1">
+            <h4 class="mdTitle cs1Title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h4>
+            <ul class="cardOptionCol">
+              <!-- <li>{{b.timestamp.date}}</li> -->
+              <li><b>{{b.author}}</b></li>
+            </ul>
+            <p>{{b.description}}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %}  Projects and Testimonials {% endcomment %}
+<section>
+  <div class="sectionSpaceSm lightBg">
     <div class="container">
       <div class="portfolioCol">
         <div class="row pb-3">
@@ -196,7 +231,7 @@ Start Content
         {% endfor %}
         
       </div>
-      <div class="testimonialCol">
+      <!-- <div class="testimonialCol">
         <h4 class="smText regular d-block">Testimonials</h4>
         <div class="testimonialSlider">
           <div class="swiper testimonialSwiper">
@@ -230,43 +265,12 @@ Start Content
 
 
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
 
-{% comment %} WORK EXP {% endcomment %}
-<section>
-  <div class="sectionSpaceSm lightBg">
-    <div class="container">
-      <div class="row pb-3">
-        <div class="col">
-          <h4 class="smText regular">Work Exprerience</h4>
-        </div>
-        <div class="col-auto">
-          <a href="{% url 'main:blogs' %}" class="simpleLink">View all</a>
-        </div>
-      </div>
-      <div class="row g-3">
-      {% for b in blogs %}
-      {% if b.is_active %}
-        <div class="col-lg-6">
-          <div class="cardStyle1">
-            <h4 class="mdTitle cs1Title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h4>
-            <ul class="cardOptionCol">
-              <li>{{b.timestamp.date}}</li>
-              <li>{{b.author}}</li>
-            </ul>
-            <p>{{b.description}}</p>
-          </div>
-        </div>
-        {% endif %}
-        {% endfor %}
 
-      </div>
-    </div>
-  </div>
-</section>
 {% endblock %}
 <!-- ================================
 End Content
