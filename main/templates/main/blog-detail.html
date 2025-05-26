@@ -39,6 +39,13 @@ Start Content
           <div class="bannerContent">
             <h1 class="xlTitle pb-md-3">{{object.name|title}}</h1>
           </div>
+
+          <div class="pCol">
+            <a href="{% url 'main:blog' slug=object.slug %}" >
+             <img src="{{object.image.url}}" alt="..." class="pImg">
+            </a>
+          </div>
+
         </div>
       </div>
       <div class="row">

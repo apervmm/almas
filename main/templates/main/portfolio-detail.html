@@ -41,8 +41,21 @@ Start Content
           </div>
         </div>
       </div>
+
+      <div class="pCol">
+        <div class="portfolioImgCol">
+          <a href="{% url 'main:portfolio' slug=object.slug %}">
+            <img src="{{object.image.url}}" alt="...">
+          </a>
+        </div>
+      </div>
+      
     </div>
   </div>
+</section>
+
+<section>
+
 </section>
 
 <section>

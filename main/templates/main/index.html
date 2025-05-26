@@ -173,6 +173,7 @@ Start Content
           <a href="{% url 'main:blogs' %}" class="simpleLink">View all</a>
         </div>
       </div>
+
       <div class="row g-3">
       {% for b in blogs %}
       {% if b.is_active %}
@@ -188,8 +189,8 @@ Start Content
         </div>
         {% endif %}
         {% endfor %}
-
       </div>
+      
     </div>
   </div>
 </section>

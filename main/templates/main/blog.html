@@ -48,20 +48,37 @@ Start Content
 <section>
   <div class="lightBg">
     <div class="container">
-      <div class="portfolioContentMain">
+
+      <!-- <div class="portfolioContentMain">
         <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
           {% for obj in object_list %}
           <div class="col-md-6 pColMain">
             <div class="pCol">
               <a href="{% url 'main:blog' slug=obj.slug %}" >
-               <img src="{{obj.image.url}}" alt="..." class="pImg"> 
+               <img src="{{obj.image.url}}" alt="..." class="pImg">
               </a>
             </div>
           </div>
           {% endfor %}
 
         </div>
+      </div> -->
+
+      <div class="row g-3">
+        {% for obj in object_list %}
+          <div class="col-lg-6">
+            <div class="cardStyle1">
+              <h4 class="mdTitle cs1Title"><a href="{% url 'main:blog' slug=obj.slug %}">{{obj.name}}</a></h4>
+              <ul class="cardOptionCol">
+                <!-- <li>{{b.timestamp.date}}</li> -->
+                <li><b>{{obj.author}}</b></li>
+              </ul>
+              <p>{{obj.description}}</p>
+            </div>
+          </div>
+          {% endfor %}
       </div>
+      
     </div>
   </div>
 </section>
