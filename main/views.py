@@ -46,7 +46,7 @@ class PortfolioView(generic.ListView):
     template_name = "main/portfolio.html"
 
     def get_queryset(self):
-        return super().get_queryset().filter(is_active=True)
+        return super().get_queryset().filter(is_active=True).order_by("-date")
     
 class PortfolioDetailView(generic.DetailView):
     model = Portfolio
