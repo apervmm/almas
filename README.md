@@ -1,24 +1,21 @@
 # Resume on Django
 
-# Set up by cmd:
-
+### Activate a virtual environment:
 python -m venv .venv
 
-On Windows:
-.venv\Scripts\activate
+Windows: .venv\Scripts\activate
+
+MacOS: source .venv/bin/activate
 
 pip install -r requirements.txt
 
 # Configure Environmental Variables in settings.py by adding .env
 
+
+### Run on port 8000
 python manage.py runserver
 
-On the browser, go to :
-
-http://127.0.0.1:8000/
 
 
-
-
-# RUNNING DEMO:
+# Production:
 https://apervm.vercel.app/
