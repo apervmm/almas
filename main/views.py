@@ -11,7 +11,7 @@ class IndexView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         testimonials = Testimonial.objects.filter(is_active=True)
         certificates = Certificate.objects.filter(is_active=True).order_by("-date")
-        blogs = Blog.objects.filter(is_active=True)
+        blogs = Blog.objects.filter(is_active=True).order_by("-timestamp")
         portfolio = Portfolio.objects.filter(is_active=True).order_by("-date")[:5]
         
         
@@ -59,7 +59,7 @@ class BlogView(generic.ListView):
     paginate_by = 10
     
     def get_queryset(self):
-        return super().get_queryset().filter(is_active=True)
+        return super().get_queryset().filter(is_active=True).order_by('-timestamp')
     
     
 class BlogDetailView(generic.DetailView):
