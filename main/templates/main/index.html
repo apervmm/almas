@@ -46,6 +46,8 @@ Start Content
           <div class="bannerContent">
             <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}, <br> a {{me.userprofile.title}} </br></h1>
             <p>{{me.userprofile.bio|safe}}</p>
+
+
             <div class="bannerBtnCol">
               <div class="row">
                 <div class="col-auto">
@@ -55,8 +57,19 @@ Start Content
                 <div class="col-auto">
                   <a href="{% url 'main:contact' %}" class="btn btnOutline">Contact</a>
                 </div>
+                
+                <div class="col-auto">
+                  <ul class="socialM">
+                  <li><a href="https://www.linkedin.com/in/almas-perneshev/"  target="_blank"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>
+                  <li><a href="https://github.com/apervmm"  target="_blank"><img src="{% static 'images/github1.png' %}" alt="..."></a></li>
+                  </ul>
+                </div>
+
+              </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>

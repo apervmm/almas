@@ -534,6 +534,24 @@ body.navToggleActive {
 }
 
 
+
+.socialM li {
+  display: inline-block;
+}
+.socialM li + li {
+  padding-left: 35px;
+  padding-top: 10px;
+}
+.socialM img {
+  max-width: 30px;
+  max-height: 30px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+
+
+
 /* portfolio page */
 .innerPageBannerCol {
 	padding: 180px 0 150px;
