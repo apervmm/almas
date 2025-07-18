@@ -9,7 +9,7 @@ MacOS: source .venv/bin/activate
 
 pip install -r requirements.txt
 
-# Configure Environmental Variables in settings.py by adding .env
+### Configure Environmental Variables in settings.py by adding .env
 
 
 ### Run on port 8000
@@ -17,5 +17,5 @@ python manage.py runserver
 
 
 
-# Production:
+### Production:
 https://apervm.vercel.app/
