@@ -1,4 +1,4 @@
-# Resume on Django
+# Full Stack Resume Application
 
 ### Activate a virtual environment:
 python -m venv .venv
